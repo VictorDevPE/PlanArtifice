@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plan Artifice - Víctor Reque</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        header {
+            background-color: #337C86;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-container {
+            flex: 1; /* Asegura que ocupe la mayor parte del lado izquierdo */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 450px; /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+
+        .navbar {
+            flex: 2; /* Esto asegura que el menú esté alineado a la derecha */
+            display: flex;        
+            justify-content: flex-end;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlighted {
+            font-size: 3.5em; /* Tamaño del título */
+            text-transform: uppercase; /* Convertir a mayúsculas */
+            color: white; /* Color blanco del texto */
+            font-weight: bold;
+            margin-bottom: 0;
+            background-color: #333; /* Fondo negro */
+            padding: 10px 20px;
+            letter-spacing: 0.05em; /* Espaciado de letras */
+            font-family: 'Arial Black', Gadget, sans-serif; /* Fuente gruesa y moderna */
+            text-align: center; /* Centrado del texto */
+        }
+
+        .welcome-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .introduction, .description {
+            font-size: 20px;
+        }
+
+        /* Estilo para la galería de imágenes */
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 30%;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .category {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        /* Botones y estilos generales */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Opción de tema claro y oscuro */
+        .settings-section {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .settings-option label {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .settings-option select {
+            padding: 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Modo claro y oscuro */
+        body.light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú de navegación -->
+    <header>
+        <div class="menu container">
+            <div class="logo-container">
+                <a href="https://ibb.co/f1Fz6wR"><img src="https://i.ibb.co/M2Sxw0T/image.png" alt="image" border="0" /></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown"> 
+                        <a href="#">Publicaciones</a>
+                        <ul class="dropdown-content">
+                            <li><a href="infografias.html" target="_blank">Infografías</a></li>
+                            <li><a href="Bioinigenieria.html">Bioingeniería</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal</a>
+                        <ul class="dropdown-content">
+                            <li><a href="barranco.html" target="_blank">Barranco</a></li>
+                            <li><a href="eten.html" target="_blank">Ciudad de Eten</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section">
+        <div class="welcome-content container">
+            <h1 class="highlighted">¡BIENVENIDOS!</h1>
+            <p class="introduction">
+                Soy Víctor Hernán Reque Neciosup, estudiante del quinto ciclo en la Universidad de Ingeniería y Tecnología (UTEC). 
+                He creado esta plataforma como un canal para la divulgación de ciencia y tecnología, con el objetivo de despertar 
+                la curiosidad y el interés en estos apasionantes campos.
+
+                Enfocados especialmente en la bioingeniería, buscamos impulsar su desarrollo y contribuir a construir un Perú 
+                más avanzado en esta disciplina. Acompáñanos en este viaje hacia el conocimiento y la innovación, donde cada idea 
+                cuenta para transformar nuestra comunidad.
+            </p>
+            <p class="description">
+                Biología es la tecnología más avanzada jamás creada. El ADN es software, las proteínas hardware y las células, fábricas.
+                - Arvind Gupta, inventor Indio
+            </p>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section class="image-gallery">
+        <div class="image-container">
+            <img src="images/image1.jpg" alt="Imagen 1">
+            <p class="category">Salud</p>
+        </div>
+        <div class="image-container">
+            <img src="images/image2.jpg" alt="Imagen 2">
+            <p class="category">Educación</p>
+        </div>
+        <div class="image-container">
+            <img src="images/image3.jpg" alt="Imagen 3">
+            <p class="category">Cultura</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contact" class="contact container">
+        <h2>Contacto</h2>
+        <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico.</p>
+        <a href="mailto:victor.reque@utec.edu.pe" class="btn">Enviar Correo</a>
+    </section>
+
+    <!-- Opción de traducción -->
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'es,en,fr,pt,zh-CN,de,nl,qu,ay', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Opción de tema -->
+    <section class="settings-section container">
+        <div class="settings-option">
+            <label for="theme-select">Modo de visualización</label>
+            <select id="theme-select" onchange="changeTheme()">
+                <option value="auto">Automático</option>
+                <option value="light">Luz</option>
+                <option value="dark">Oscuro</option
+                <option value="dark">Oscuro</option>
+            </select>
+        </div>
+    </section>
+
+    <script>
+        function changeTheme() {
+            var theme = document.getElementById("theme-select").value;
+            if (theme === "light") {
+                document.body.classList.add('light-mode');
+                document.body.classList.remove('dark-mode');
+            } else if (theme === "dark") {
+                document.body.classList.add('dark-mode');
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.remove('light-mode', 'dark-mode');
+            }
+        }
+    </script>
+
+</body>
+</html>
